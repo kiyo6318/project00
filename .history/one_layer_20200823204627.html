@@ -33,6 +33,7 @@
 <body>
 <div id="app">
 
+
     <header>
 
 
@@ -97,15 +98,17 @@
             箱の材質圧<br>
             material thickness<br>
             <!-- <input type="number" class="object_input_area2" v-model.number="materialThickness"> -->
-            <select v-model.number="materialThickness" class="object_input_area2">
-                <option value="5">5</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="10">10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-                <option value="25">25</option>
-            </select>[mm](5,7,8,10,15,20,25)
+            <div>
+                <select v-model.number="materialThickness" class="object_input_area2">
+                    <option value="5">5</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                </select>[mm](5,7,8,10,15,20,25)
+                </div>
         </div>
 
         <br>

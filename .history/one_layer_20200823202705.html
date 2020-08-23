@@ -16,7 +16,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="project.css" media="all" rel="stylesheet" type="text/css" />
     <!--css-->
-    <link href="responsible.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="responsive.css" media="all" rel="stylesheet" type="text/css" />
     <!--css-->
     <link href="reset.css" media="all" rel="stylesheet" type="text/css" />
     <!--reset_css-->
@@ -32,6 +32,7 @@
 
 <body>
 <div id="app">
+
 
     <header>
 
@@ -57,9 +58,9 @@
             <div class="row">
 
 
-                <div class="col-md-3 ">幅 W [mm]<input type="number" class="object_input_area" v-model.number="width"></div>
-                <div class="col-md-3 ">奥行　D [mm]<input type="number" class="object_input_area" v-model.number="depth"></div>
-                <div class="col-md-3 ">高さ H [mm]<input type="number" class="object_input_area" v-model.number="height"></div>
+                <div class="col-md-3 ">幅 W [cm]<input type="number" class="object_input_area" v-model.number="width"></div>
+                <div class="col-md-3 ">奥行　D [cm]<input type="number" class="object_input_area" v-model.number="depth"></div>
+                <div class="col-md-3 ">高さ H [cm]<input type="number" class="object_input_area" v-model.number="height"></div>
 
 
 
@@ -70,6 +71,9 @@
 
         </div>
 
+<div>{{editedWidthOverallSize}}</div>
+<div>{{editedDepthOverallSize}}</div>
+<div>{{editedHeightOverallSize}}</div>
 
 
 
@@ -84,7 +88,7 @@
 
             余裕幅<br>
             clearance<br>
-            <input type="number" class="object_input_area2" v-model.number="clearance" step="0.5" min="0">
+            <input type="number" class="object_input_area2" v-model.number="clearance">
 
         </div>
 
@@ -96,16 +100,8 @@
 
             箱の材質圧<br>
             material thickness<br>
-            <!-- <input type="number" class="object_input_area2" v-model.number="materialThickness"> -->
-            <select v-model.number="materialThickness" class="object_input_area2">
-                <option value="5">5</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="10">10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-                <option value="25">25</option>
-            </select>[mm](5,7,8,10,15,20,25)
+            <input type="number" class="object_input_area2" v-model.number="materialThickness">
+
         </div>
 
         <br>
@@ -119,17 +115,12 @@
 
             1箱あたりの階層<br>
             number of layer by surface<br>
-            <!-- <input type="number" class="object_input_area2" v-model.number="numberOfLayerBySurface"> -->
-            <select v-model.number="numberOfLayerBySurface" class="object_input_area2">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option> </select>[mm](1,2,3)
+            <input type="number" class="object_input_area2" v-model.number="numberOfLayerBySurface">
+
         </div>
 
-        <h2>全体の大きさ</h2>
-        <div>W= {{editedWidthOverallSize}}</div>
-        <div>D= {{editedDepthOverallSize}}</div>
-        <div>H= {{editedHeightOverallSize}}</div>
+
+
 
 
 
@@ -178,7 +169,7 @@
 
 
 
-        <div id="right-conteiner_img">　<img src="./img/sample.png" alt=""></div>
+        <div id="right-conteiner_img">　<img src="F:/project/project00/img/sample.png" alt=""></div>
 
         　　　　　　
 
@@ -195,7 +186,7 @@
 
 
 
-        <div id="main_img"><img src="./img/sample2.png"></div>
+        <div id="main_img"><img src="F:/project/project00/img/sample2.png"></div>
 
 
 
@@ -216,7 +207,7 @@
 
 
                 <div class="col-md-2 ">上面top&底面bottom</div>
-                <div><img src="./img/main1.png"></div>
+                <div><img src="F:/project/project00/img/main1.png"></div>
                 <div>panel size w460xD560</div>
                 <div>x2(2枚/Sheets)</div>
 
@@ -226,7 +217,7 @@
 
 
                 <div class="col-md-3 ">上面top&底面bottom</div>
-                <div><img src="./img/main2.png"></div>
+                <div><img src="F:/project/project00/img/main2.png"></div>
                 <div>panel size w460xD560</div>
                 <div>x2(2枚/Sheets)</div>
 
@@ -236,7 +227,7 @@
 
 
                 <div class="col-md-3 ">上面top&底面bottom</div>
-                <div><img src="./img/main3.png"></div>
+                <div><img src="F:/project/project00/img/main3.png"></div>
                 <div>panel size w460xD560</div>
                 <div>x2(2枚/Sheets)</div>
 
@@ -305,7 +296,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
+<script src="js/index.js"></script>
 </body>
 
 </html>

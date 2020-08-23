@@ -139,10 +139,5 @@ h1 {
 }
 
 select {
-  width: 50px;
-  -moz-appearance: menulist;
-  -webkit-appearance: menulist;
-}
-select::-ms-expand {
-  display: block;
+  width: 100px;
 }

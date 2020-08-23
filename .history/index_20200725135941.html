@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project00</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js"></script>
+    <script src="https://unpkg.com/vee-validate@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+      <form>
+        <h3>模型サイズ<br>object size</h3>
+        <span>幅 W [mm]</span>
+        <input v-model="width" v-validate="required" type="number" placeholder="整数を入力" min="0">
+        <span v-if="errors.has('width')">{{errors.first('width')}}</span>
+        <div>入力: {{ width }}</div>
+        <pre>{{$v}}</pre>
+        <span>奥行 D [mm]</span>
+        <input v-model.trim="depth" type="number" placeholder="整数を入力" min="0">
+        <span>高さ H [mm]</span>
+        <input v-model.trim="height" type="number" placeholder="整数を入力" min="0">
+        <h3>余裕幅<br>clearance</h3>
+        <input v-model.trim="clearance" type="number" placeholder="整数を入力" step="0.5" min="0">[cm]
+        <h3>箱の材料厚</h3>
+        <select v-model="materialThickness">
+          <option value="5">5</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+        </select>[mm](5,7,8,10,15,20,25)
+        <h3>１面当たりの層数</h3>
+        <select v-model="numberOfLayerBySurface">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>[mm](1,2,3)
+        <div>
+            上面・底面
+            <br>外W = {{ topBottomOutWidth }}
+            <br>外D = {{ topBottomOutDepth }}
+            <br>内W = {{ topBottomInWidth }}
+            <br>内D = {{ topBottomInDepth }}
+        </div>
+        <div>
+            側面
+            <br>外 W = {{ sideOutWidth }}
+            <br>外 H = {{ sideOutHeight }}
+            <br>内 W = {{ sideInWidth }}
+            <br>内 H = {{ sideInHeight }}
+        </div>
+        <div>
+            前面・背面
+            <br>外 H = {{ frontBackOutHeight }}
+            <br>外 D = {{ frontBackOutDepth }}
+            <br>内 H = {{ frontBackInHeight }}
+            <br>内 D = {{ frontBackInDepth }}
+        </div>
+    </form>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

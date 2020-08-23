@@ -140,9 +140,5 @@ h1 {
 
 select {
   width: 50px;
-  -moz-appearance: menulist;
-  -webkit-appearance: menulist;
-}
-select::-ms-expand {
-  display: block;
+  cursor: pointer;
 }

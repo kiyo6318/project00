@@ -1,0 +1,11 @@
+body {
+    font-family: Verdana, Geneva, "sans-serif";
+}
+
+input {
+    border: 1px solid silver;
+    border-radius: 4px;
+    background: white;
+    padding: 5px 10px;
+    font-size: 1.2em;
+}

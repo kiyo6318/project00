@@ -1,0 +1,208 @@
+
+
+/*--------------------------------
+ html
+---------------------------------*/
+
+html{
+
+
+    margin: 0 auto;
+
+
+
+}
+
+/*--------------------------------
+ multiple
+---------------------------------*/
+
+
+
+.row,#left-conteiner_title,.left-conteiner_second,#right-conteiner{
+
+    padding-left: 2rem;
+}
+
+
+
+
+
+.col-md-3 .object_input_area,.object_input_area2,.right-conteiner_input{
+
+    
+    border: solid 0.1rem;
+
+   
+}
+
+
+/*--------------------------------
+ body,css-grit
+---------------------------------*/
+
+
+body{
+
+   
+   margin: 0 auto;
+   min-height: 100vh;
+  
+   display: grid;
+   grid-template:
+   "header header header"10rem
+   " left  center  right"40rem
+   "main   main    main "90rem
+   "footer  footer  footer"30rem
+   /60rem 1fr 60rem;
+   
+}
+
+#center{
+
+    grid-area: center;
+}
+
+#right{
+
+    grid-area: right;
+}
+
+#main{
+
+    grid-area: main;
+
+}
+
+
+#footer{
+
+    grid-area: footer;
+}
+
+/*--------------------------------
+ header
+---------------------------------*/
+
+header{
+    grid-area:header;
+    background-color: #ffff;
+   
+    font-size: 3rem;
+    
+}
+
+
+/*--------------------------------
+ title
+---------------------------------*/
+
+
+h1{
+
+
+    color: red;
+
+    padding-top: 3rem;
+    padding-left: 3rem;
+    
+
+
+
+
+}
+  
+
+/*--------------------------------
+ button
+---------------------------------*/
+
+
+
+
+#try_button{
+
+    padding-left: 20rem;
+}
+
+.btn-sticky {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #f7f7f7;
+    border-left: solid 6px red;/*左線*/
+    color: red;/*文字色*/
+    font-weight: bold;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  }
+  .btn-sticky:active {
+    box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+    transform: translateY(2px);
+  }
+
+
+
+
+
+/*--------------------------------
+ right
+---------------------------------*/
+
+
+#right-conteiner{
+
+    padding-top: 1.5rem;
+}
+
+#right-conteiner_img{
+
+    padding-left: 20rem;
+}
+
+
+
+/*--------------------------------
+ main
+---------------------------------*/
+
+    #main_img{
+
+        padding-left: 10rem;
+    }
+
+    #main_category{
+
+        padding-left: 5rem;
+
+
+    }
+
+    .main_category_division{
+
+        padding-top: 8rem;
+
+    }
+
+
+    
+
+/*--------------------------------
+ footer
+---------------------------------*/
+
+
+#footer_copyright{
+
+
+    padding-top: 10rem;
+    padding-left: 50rem;
+
+
+
+}
+
+
+
+
+
+

@@ -138,11 +138,6 @@ h1 {
   padding-left: 50rem;
 }
 
-select {
-  width: 50px;
-  -moz-appearance: menulist;
-  -webkit-appearance: menulist;
-}
-select::-ms-expand {
-  display: block;
+input {
+  width: 100px;
 }
